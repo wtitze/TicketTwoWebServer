@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+  body
+    form(action='prenota', method='get')
+      | #{message}:
+      br
+      | scegli la data: 
+      input(type='date', name='data')
+      br
+      | inserisci la fila: 
+      input(type='number', name='fila')
+      br
+      | inserisci la poltrona: 
+      input(type='number', name='poltrona')
+      br
+      input(type='submit', value='invia')
+      br
+      br
+    form(action='cancella', method='get')
+      | #{message}:
+      br
+      | inserisci il numero della prenotazione: 
+      input(type='number', name='n')
+      br
+      input(type='submit', value='invia')
+      br
+      br
+    form(action='lista', method='get')
+      | clicca per avere l'elenco delle prenotazioni
+      br
+      input(type='submit', value='invia')

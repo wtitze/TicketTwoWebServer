@@ -1,0 +1,21 @@
+html
+  head
+    title= title
+  body
+    h1= message
+    // definizione della tabella
+    if list !== undefined
+      table
+        thead
+          th(align='left') id
+          th(align='left') numero 
+          th(align='left') data 
+          th(align='left') fila
+          th(align='left') poltrona
+        each prenotazione in list
+          tr
+            td= prenotazione._id
+            td= prenotazione.numero
+            td= prenotazione.data
+            td= prenotazione.fila
+            td= prenotazione.poltrona
